@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SG REALTOR | Premier Real Estate, Builders & Interior Designers in Gurugram</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            100: '#FDF8EC',
+                            300: '#E6C875',
+                            400: '#D8B244',
+                            500: '#C5A059',
+                            600: '#A37E36',
+                            700: '#7A5B20'
+                        },
+                        obsidian: {
+                            900: '#0B0F17',
+                            800: '#121824',
+                            700: '#1E2638',
+                            600: '#2A354D'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS Styles -->
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #0B0F17;
+            color: #E2E8F0;
+            overflow-x: hidden;
+        }
+
+        .font-serif-title {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFF3D1 0%, #D8B244 50%, #A37E36 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-border-glow {
+            box-shadow: 0 0 25px rgba(197, 160, 89, 0.15);
+            border: 1px solid rgba(197, 160, 89, 0.3);
+        }
+
+        .gold-border-glow:hover {
+            box-shadow: 0 0 35px rgba(197, 160, 89, 0.35);
+            border-color: rgba(216, 178, 68, 0.6);
+        }
+
+        .glass-card {
+            background: rgba(18, 24, 36, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-nav {
+            background: rgba(11, 15, 23, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(197, 160, 89, 0.15);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0B0F17;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2A354D;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #C5A059;
+        }
+
+        /* Hero Background Pattern */
+        .hero-pattern {
+            background-image: radial-gradient(rgba(197, 160, 89, 0.12) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-gold-500 selection:text-obsidian-900">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-nav transition-all duration-300" id="mainHeader">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-gold-400 via-gold-500 to-gold-700 flex items-center justify-center text-obsidian-900 font-extrabold text-xl shadow-lg shadow-gold-500/20 group-hover:scale-105 transition-transform duration-300">
+                    SG
+                </div>
+                <div>
+                    <span class="text-2xl font-black tracking-wider text-white font-serif-title block leading-none">
+                        SG REALTOR<span class="text-gold-400">.</span>
+                    </span>
+                    <span class="text-[10px] tracking-[0.25em] text-gold-400 uppercase font-semibold">Builders & Developers</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#about" class="text-gray-300 hover:text-gold-400 transition-colors">About Us</a>
+                <a href="#services" class="text-gray-300 hover:text-gold-400 transition-colors">Services</a>
+                <a href="#properties" class="text-gray-300 hover:text-gold-400 transition-colors">Properties</a>
+                <a href="#interiors" class="text-gray-300 hover:text-gold-400 transition-colors">Interior Design</a>
+                <a href="#calculator" class="text-gray-300 hover:text-gold-400 transition-colors">EMI & ROI Calculator</a>
+                <a href="#reviews" class="text-gray-300 hover:text-gold-400 transition-colors">Reviews</a>
+            </nav>
+
+            <!-- Action Buttons -->
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="tel:09650543743" class="flex items-center gap-2 text-sm text-gold-300 hover:text-white px-3 py-2 rounded-lg transition-colors">
+                    <i class="fa-solid fa-phone text-gold-400"></i>
+                    <span>+91 96505 43743</span>
+                </a>
+                <a href="#contact" class="bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-obsidian-900 font-bold px-5 py-2.5 rounded-xl shadow-md shadow-gold-500/20 transition-all hover:shadow-gold-500/40 hover:-translate-y-0.5 text-sm">
+                    Book Site Visit
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobileMenuBtn" class="md:hidden text-gray-300 hover:text-gold-400 text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden glass-card border-t border-gold-500/20 px-6 py-6 space-y-4">
+            <a href="#about" class="block text-gray-200 hover:text-gold-400 font-medium py-1">About Us</a>
+            <a href="#services" class="block text-gray-200 hover:text-gold-400 font-medium py-1">Services</a>
+            <a href="#properties" class="block text-gray-200 hover:text-gold-400 font-medium py-1">Properties</a>
+            <a href="#interiors" class="block text-gray-200 hover:text-gold-400 font-medium py-1">Interior Design</a>
+            <a href="#calculator" class="block text-gray-200 hover:text-gold-400 font-medium py-1">EMI & ROI Calculator</a>
+            <a href="#reviews" class="block text-gray-200 hover:text-gold-400 font-medium py-1">Reviews</a>
+            <a href="#contact" class="block text-center bg-gold-500 text-obsidian-900 font-bold py-3 rounded-xl mt-4">Book Consultation</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden hero-pattern">
+        <!-- Glow Orbs -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gold-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute top-1/3 right-10 w-[300px] h-[300px] bg-blue-600/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto">
+                <!-- Trust Badge -->
+                <div class="inline-flex items-center gap-2 bg-obsidian-800/80 border border-gold-500/30 rounded-full px-4 py-1.5 mb-6 backdrop-blur-md shadow-md">
+                    <div class="flex text-amber-400 text-xs">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="text-xs font-semibold text-gray-200">4.9 / 5 Rating on Google (21+ Reviews)</span>
+                    <span class="w-1.5 h-1.5 rounded-full bg-gold-400"></span>
+                    <span class="text-xs text-gold-300 font-medium">Gurugram Premier Developers</span>
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight font-serif-title leading-tight mb-6">
+                    Redefining Luxury Living & <span class="gold-gradient-text block mt-1">Property Excellence</span>
+                </h1>
+
+                <p class="text-lg text-gray-300 font-normal leading-relaxed mb-8">
+                    SG REALTOR is your premier property partner, builder, developer & interior collaboration specialist in Gurugram. High corporate values, obsessive attention to detail, and cost-effective architectural solutions.
+                </p>
+            </div>
+
+            <!-- Property Search Bar Widget -->
+            <div class="mt-8 glass-card rounded-2xl p-4 sm:p-6 gold-border-glow max-w-4xl mx-auto shadow-2xl">
+                <div class="flex flex-wrap gap-2 border-b border-gray-800 pb-4 mb-4" id="searchTabs">
+                    <button class="search-tab active bg-gold-500 text-obsidian-900 font-bold px-5 py-2 rounded-xl text-sm transition-all" data-type="all">All Properties</button>
+                    <button class="search-tab text-gray-300 hover:text-gold-400 font-medium px-5 py-2 rounded-xl text-sm transition-all" data-type="buy">Buy Luxury Residence</button>
+                    <button class="search-tab text-gray-300 hover:text-gold-400 font-medium px-5 py-2 rounded-xl text-sm transition-all" data-type="collaboration">Collaborations</button>
+                    <button class="search-tab text-gray-300 hover:text-gold-400 font-medium px-5 py-2 rounded-xl text-sm transition-all" data-type="interiors">Interior Solutions</button>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-400 uppercase mb-1">Micro Market / Area</label>
+                        <select id="heroLocation" class="w-full bg-obsidian-900 border border-gray-700 rounded-xl px-3 py-2.5 text-sm text-gray-200 focus:border-gold-500 focus:outline-none">
+                            <option value="all">Sushant Lok Phase 1 & 2</option>
+                            <option value="golf-course">Golf Course Road</option>
+                            <option value="extension">Golf Course Ext. Road</option>
+                            <option value="dlf">DLF Phase 1, 2, 4 & 5</option>
+                            <option value="sohna">Sohna Road Corridor</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-400 uppercase mb-1">Property Category</label>
+                        <select id="heroCategory" class="w-full bg-obsidian-900 border border-gray-700 rounded-xl px-3 py-2.5 text-sm text-gray-200 focus:border-gold-500 focus:outline-none">
+                            <option value="all">Any Category</option>
+                            <option value="builder-floor">Builder Floor / Luxury Flat</option>
+                            <option value="villa">Independent Villa / Plot</option>
+                            <option value="commercial">Commercial Office & Retail</option>
+                            <option value="interior">Interior Fit-out Project</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-400 uppercase mb-1">Budget Range</label>
+                        <select id="heroBudget" class="w-full bg-obsidian-900 border border-gray-700 rounded-xl px-3 py-2.5 text-sm text-gray-200 focus:border-gold-500 focus:outline-none">
+                            <option value="all">Any Budget</option>
+                            <option value="1cr-3cr">₹1 Cr - ₹3 Cr</option>
+                            <option value="3cr-7cr">₹3 Cr - ₹7 Cr</option>
+                            <option value="7cr+">₹7 Cr - ₹20 Cr+</option>
+                        </select>
+                    </div>
+
+                    <div class="flex items-end">
+                        <button onclick="handleHeroSearch()" class="w-full bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-obsidian-900 font-extrabold py-2.5 rounded-xl shadow-md transition-all flex items-center justify-center gap-2 text-sm">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <span>Search Properties</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Metrics Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 max-w-5xl mx-auto">
+                <div class="glass-card rounded-2xl p-5 text-center">
+                    <span class="text-3xl sm:text-4xl font-extrabold gold-gradient-text block font-serif-title">15+</span>
+                    <span class="text-xs text-gray-400 font-medium uppercase tracking-wider mt-1 block">Years Experience</span>
+                </div>
+                <div class="glass-card rounded-2xl p-5 text-center">
+                    <span class="text-3xl sm:text-4xl font-extrabold gold-gradient-text block font-serif-title">250+</span>
+                    <span class="text-xs text-gray-400 font-medium uppercase tracking-wider mt-1 block">Homes Delivered</span>
+                </div>
+                <div class="glass-card rounded-2xl p-5 text-center">
+                    <span class="text-3xl sm:text-4xl font-extrabold gold-gradient-text block font-serif-title">4.9 ★</span>
+                    <span class="text-xs text-gray-400 font-medium uppercase tracking-wider mt-1 block">Google Rating</span>
+                </div>
+                <div class="glass-card rounded-2xl p-5 text-center">
+                    <span class="text-3xl sm:text-4xl font-extrabold gold-gradient-text block font-serif-title">100%</span>
+                    <span class="text-xs text-gray-400 font-medium uppercase tracking-wider mt-1 block">Quality Assurance</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-obsidian-800/50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Visual Banner -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-gold-500/20">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="SG Realtor Luxury Property" class="w-full h-[450px] object-cover hover:scale-105 transition-transform duration-700" onerror="this.src='https://placehold.co/800x600/1E2638/D8B244?text=SG+Realtor+Gurugram'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-obsidian-900 via-transparent to-transparent opacity-80"></div>
+                        
+                        <div class="absolute bottom-6 left-6 right-6 glass-card p-4 rounded-xl border border-gold-500/30">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-gold-500/20 flex items-center justify-center text-gold-400">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gold-300 font-semibold uppercase">Prime Gurugram HQ</p>
+                                    <p class="text-sm font-bold text-white">Sushant Lok Phase 1 (Opp. Courtyard Marriott)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Content -->
+                <div class="lg:col-span-7">
+                    <div class="inline-block px-3 py-1 bg-gold-500/10 border border-gold-500/30 rounded-full text-gold-400 font-semibold text-xs uppercase tracking-wider mb-4">
+                        About SG REALTOR
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold font-serif-title text-white mb-6 leading-tight">
+                        Benchmark of Corporate Values & <span class="gold-gradient-text">Architectural Fine Craft</span>
+                    </h2>
+
+                    <p class="text-gray-300 text-base leading-relaxed mb-6">
+                        We at <strong class="text-gold-300">SG REALTOR Builders, Developers & Collaborators</strong> are a premier real estate organization based in Gurugram, Haryana. Built upon unwavering corporate integrity, meticulous attention to detail, and cost-effective modern developments, our vision is to set new benchmarks in NCR real estate.
+                    </p>
+
+                    <p class="text-gray-400 text-sm leading-relaxed mb-8">
+                        Whether you are acquiring a luxury independent builder floor in Sushant Lok, searching for high-yield commercial leasing options, seeking joint venture property collaboration, or desiring end-to-end interior design and fit-outs, SG REALTOR ensures seamless execution from concept to handover.
+                    </p>
+
+                    <!-- Core Value Pillars -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="p-4 rounded-xl bg-obsidian-900/80 border border-gray-800 flex items-start gap-3">
+                            <i class="fa-solid fa-shield-halved text-gold-400 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Transparent Collaborations</h4>
+                                <p class="text-xs text-gray-400 mt-0.5">Ethical joint ventures and legal clarity for landowners & buyers.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-obsidian-900/80 border border-gray-800 flex items-start gap-3">
+                            <i class="fa-solid fa-compass-drafting text-gold-400 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Turnkey Interior Design</h4>
+                                <p class="text-xs text-gray-400 mt-0.5">Bespoke luxury fit-outs and customized architectural design.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-obsidian-900/80 border border-gray-800 flex items-start gap-3">
+                            <i class="fa-solid fa-chart-line text-gold-400 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">High Return on Investment</h4>
+                                <p class="text-xs text-gray-400 mt-0.5">Strategic asset selection in high-growth prime micro-markets.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-obsidian-900/80 border border-gray-800 flex items-start gap-3">
+                            <i class="fa-solid fa-handshake-angle text-gold-400 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Property Management</h4>
+                                <p class="text-xs text-gray-400 mt-0.5">Hassle-free landlord advisory, leasing, and asset care.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Services Section -->
+    <section id="services" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-semibold uppercase tracking-widest text-gold-400 block mb-2">Tailored Real Estate Solutions</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-serif-title text-white">Our Signature Real Estate Services</h2>
+                <div class="w-16 h-1 bg-gold-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service 1 -->
+                <div class="glass-card rounded-2xl p-8 gold-border-glow transition-all group hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-2xl bg-gold-500/10 text-gold-400 flex items-center justify-center text-2xl mb-6 group-hover:bg-gold-500 group-hover:text-obsidian-900 transition-colors">
+                        <i class="fa-solid fa-building-user"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Builder Floor Development</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Ultra-luxury independent floors in Sushant Lok, DLF Phase 1-5, and Golf Course Road with Italian marble, smart automation, and terrace gardens.
+                    </p>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-gold-400 text-sm font-semibold hover:gap-3 transition-all">
+                        <span>Explore Projects</span> <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="glass-card rounded-2xl p-8 gold-border-glow transition-all group hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-2xl bg-gold-500/10 text-gold-400 flex items-center justify-center text-2xl mb-6 group-hover:bg-gold-500 group-hover:text-obsidian-900 transition-colors">
+                        <i class="fa-solid fa-couch"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Turnkey Interior Design</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Custom interior architectural design, modular kitchens, custom woodwork, ambient lighting, and complete home transformations with premier finish.
+                    </p>
+                    <a href="#interiors" class="inline-flex items-center gap-2 text-gold-400 text-sm font-semibold hover:gap-3 transition-all">
+                        <span>View Interior Portfolio</span> <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="glass-card rounded-2xl p-8 gold-border-glow transition-all group hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-2xl bg-gold-500/10 text-gold-400 flex items-center justify-center text-2xl mb-6 group-hover:bg-gold-500 group-hover:text-obsidian-900 transition-colors">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Property Collaboration</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Joint development opportunities for plot owners in prime Gurugram sectors. Maximize your plot value with trusted architectural partnerships.
+                    </p>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-gold-400 text-sm font-semibold hover:gap-3 transition-all">
+                        <span>Collaborate With Us</span> <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="glass-card rounded-2xl p-8 gold-border-glow transition-all group hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-2xl bg-gold-500/10 text-gold-400 flex items-center justify-center text-2xl mb-6 group-hover:bg-gold-500 group-hover:text-obsidian-900 transition-colors">
+                        <i class="fa-solid fa-key"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Property Management</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        End-to-end management for NRI and local property owners: tenant verification, rent collection, routine maintenance, and lease renewals.
+                    </p>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-gold-400 text-sm font-semibold hover:gap-3 transition-all">
+                        <span>Manage Property</span> <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="glass-card rounded-2xl p-8 gold-border-glow transition-all group hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-2xl bg-gold-500/10 text-gold-400 flex items-center justify-center text-2xl mb-6 group-hover:bg-gold-500 group-hover:text-obsidian-900 transition-colors">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Commercial Leasing & Advisory</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Strategic commercial spaces, corporate office fit-outs, retail shops, and high-yielding fractional investment assets in Gurugram hubs.
+                    </p>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-gold-400 text-sm font-semibold hover:gap-3 transition-all">
+                        <span>Commercial Options</span> <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="glass-card rounded-2xl p-8 gold-border-glow transition-all group hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-2xl bg-gold-500/10 text-gold-400 flex items-center justify-center text-2xl mb-6 group-hover:bg-gold-500 group-hover:text-obsidian-900 transition-colors">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Legal & Registration Support</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Complete assistance with property title checks, registration documentation, stamp duty, home loans, and regulatory compliances.
+                    </p>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-gold-400 text-sm font-semibold hover:gap-3 transition-all">
+                        <span>Consult Specialist</span> <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Properties Section -->
+    <section id="properties" class="py-20 bg-obsidian-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-xs font-semibold uppercase tracking-widest text-gold-400 block mb-2">Exclusive Portfolio</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold font-serif-title text-white">Featured Gurugram Listings</h2>
+                </div>
+
+                <!-- Filter Pills -->
+                <div class="flex flex-wrap gap-2 mt-4 md:mt-0" id="propertyFilters">
+                    <button onclick="filterProperties('all')" class="filter-btn active bg-gold-500 text-obsidian-900 font-bold px-4 py-2 rounded-xl text-xs transition-all">All</button>
+                    <button onclick="filterProperties('sushant-lok')" class="filter-btn text-gray-300 hover:text-gold-400 bg-obsidian-900 border border-gray-700 px-4 py-2 rounded-xl text-xs transition-all">Sushant Lok 1</button>
+                    <button onclick="filterProperties('golf-course')" class="filter-btn text-gray-300 hover:text-gold-400 bg-obsidian-900 border border-gray-700 px-4 py-2 rounded-xl text-xs transition-all">Golf Course Rd</button>
+                    <button onclick="filterProperties('builder-floor')" class="filter-btn text-gray-300 hover:text-gold-400 bg-obsidian-900 border border-gray-700 px-4 py-2 rounded-xl text-xs transition-all">Builder Floors</button>
+                </div>
+            </div>
+
+            <!-- Properties Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="propertiesContainer">
+                
+                <!-- Property Card 1 -->
+                <div class="property-card glass-card rounded-2xl overflow-hidden gold-border-glow group" data-category="sushant-lok builder-floor">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Sushant Lok Villa" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-gold-500 text-obsidian-900 font-extrabold text-xs px-3 py-1 rounded-full uppercase">
+                            Ready to Move
+                        </div>
+                        <div class="absolute bottom-4 right-4 bg-obsidian-900/90 text-gold-400 font-bold text-sm px-3 py-1 rounded-lg border border-gold-500/30">
+                            ₹3.85 Cr
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-xs text-gold-400 font-semibold mb-2">
+                            <i class="fa-solid fa-location-dot"></i> Block C, Sushant Lok Phase 1
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-gold-300 transition-colors">Opulent 4 BHK Builder Floor</h3>
+                        <p class="text-xs text-gray-400 mb-4 line-clamp-2">Italian marble flooring, ultra-modern modular kitchen, private stilt parking & automatic elevator.</p>
+                        
+                        <div class="flex items-center justify-between text-xs text-gray-300 border-t border-gray-800 pt-4">
+                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-bed text-gold-400"></i> 4 Beds</span>
+                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-bath text-gold-400"></i> 4 Baths</span>
+                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-vector-square text-gold-400"></i> 2700 Sq.Ft</span>
+                        </div>
+
+                        <div class="mt-5 flex items-center gap-2">
+                            <button onclick="openPropertyModal('Opulent 4 BHK Builder Floor', 'Sushant Lok Phase 1', '₹3.85 Cr', '2700 Sq.Ft', '4 Bed, 4 Bath, Servant Room, 2 Stilt Car Parkings, Modern Modular Kitchen')" class="w-full bg-gold-500/10 hover:bg-gold-500 hover:text-obsidian-900 text-gold-400 font-bold py-2 rounded-xl text-xs border border-gold-500/30 transition-all text-center">
+                                View Details & Specs
+                            </button>
+                            <a href="https://wa.me/919650543743?text=Hi%20SG%20REALTOR,%20I%20am%20interested%20in%20the%20Opulent%204%20BHK%20Builder%20Floor%20in%20Sushant%20Lok%201" target="_blank" class="w-10 h-10 rounded-xl bg-emerald-600/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition-all">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property Card 2 -->
+                <div class="property-card glass-card rounded-2xl overflow-hidden gold-border-glow group" data-category="golf-course">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Golf Course Road Apartment" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-blue-600 text-white font-extrabold text-xs px-3 py-1 rounded-full uppercase">
+                            Exclusive Listing
+                        </div>
+                        <div class="absolute bottom-4 right-4 bg-obsidian-900/90 text-gold-400 font-bold text-sm px-3 py-1 rounded-lg border border-gold-500/30">
+                            ₹6.50 Cr
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-xs text-gold-400 font-semibold mb-2">
+                            <i class="fa-solid fa-location-dot"></i> Golf Course Road Corridor
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-gold-300 transition-colors">Ultra-Luxury Sky Residence</h3>
+                        <p class="text-xs text-gray-400 mb-4 line-clamp-2">Panoramic views of Golf Course, VRV central AC, high-end clubhouse access, double height balcony.</p>
+                        
+                        <div class="flex items-center justify-between text-xs text-gray-300 border-t border-gray-800 pt-4">
+                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-bed text-gold-400"></i> 4 BHK + Study</span>
+                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-bath text-gold-400"></i> 5 Baths</span>
+                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-vector-square text-gold-400"></i> 3800 Sq.Ft</span>
+                        </div>
+
+                        <div class="mt-5 flex items-center gap-2">
+                            <button onclick="openPropertyModal('Ultra-Luxury Sky Residence', 'Golf Course Road Corridor', '₹6.50 Cr', '3800 Sq.Ft', '4 BHK + Study + Servant Room, VRV AC, Clubhouse & Pool Access')" class="w-full bg-gold-500/10 hover:bg-gold-500 hover:text-obsidian-900 text-gold-400 font-bold py-2 rounded-xl text-xs border border-gold-500/30 transition-all text-center">
+                                View Details & Specs
+                            </button>
+                            <a href="https://wa.me/919650543743?text=Hi%20SG%20REALTOR,%20I%20want%20details%20for%20Sky%20Residence%20on%20Golf%20Course%20Road" target="_blank" class="w-10 h-10 rounded-xl bg-emerald-600/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition-all">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property Card 3 -->
+                <div class="property-card glass-card rounded-2xl overflow-hidden gold-border-glow group" data-category="sushant-lok builder-floor">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80" alt="Penthouse Floor" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-purple-600 text-white font-extrabold text-xs px-3 py-1 rounded-full uppercase">
+                            Private Terrace
+                        </div>
+                        <div class="absolute bottom-4 right-4 bg-obsidian-900/90 text-gold-400 font-bold text-sm px-3 py-1 rounded-lg border border-gold-500/30">
+                            ₹4.25 Cr
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-xs text-gold-400 font-semibold mb-2">
+                            <i class="fa-solid fa-location-dot"></i> Near Courtyard Marriott, Sushant Lok
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-gold-300 transition-colors">Exclusive Penthouse with Garden</h3>
+                        <p class="text-xs text-gray-400 mb-4 line-clamp-2">Bespoke luxury penthouse featuring landscaped roof deck, outdoor Jacuzzi provision, and smart security.</p>
+                        
+                        <div class="flex items-center justify-between text-xs text-gray-300 border-t border-gray-800 pt-4">
+                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-bed text-gold-400"></i> 3 BHK Luxury</span>
+                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-bath text-gold-400"></i> 4 Baths</span>
+                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-vector-square text-gold-400"></i> 3100 Sq.Ft</span>
+                        </div>
+
+                        <div class="mt-5 flex items-center gap-2">
+                            <button onclick="openPropertyModal('Exclusive Penthouse with Garden', 'Opposite Courtyard Marriott, Sushant Lok 1', '₹4.25 Cr', '3100 Sq.Ft', '3 BHK Penthouse with Roof Deck, Solar Water Heater, Automated Security')" class="w-full bg-gold-500/10 hover:bg-gold-500 hover:text-obsidian-900 text-gold-400 font-bold py-2 rounded-xl text-xs border border-gold-500/30 transition-all text-center">
+                                View Details & Specs
+                            </button>
+                            <a href="https://wa.me/919650543743?text=Hi%20SG%20REALTOR,%20I%20am%20interested%20in%20the%20Penthouse%20in%20Sushant%20Lok" target="_blank" class="w-10 h-10 rounded-xl bg-emerald-600/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition-all">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interior Design Showcase Section -->
+    <section id="interiors" class="py-20 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Text Content Left -->
+                <div class="lg:col-span-6">
+                    <span class="text-xs font-semibold uppercase tracking-widest text-gold-400 block mb-2">Bespoke Interior Craftsmanship</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold font-serif-title text-white mb-6">
+                        Finished Homes That Exceed Expectations
+                    </h2>
+
+                    <!-- Quote Highlight featuring Nitin Gupta Review -->
+                    <div class="glass-card p-6 rounded-2xl border-l-4 border-gold-500 mb-6 bg-obsidian-800/80">
+                        <p class="text-gray-200 italic text-sm mb-3">
+                            "I done my purchased interior designing from them and got a superb finished home."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-9 h-9 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center font-bold text-xs">
+                                NG
+                            </div>
+                            <div>
+                                <h5 class="text-white text-xs font-bold">Nitin Gupta</h5>
+                                <p class="text-[11px] text-gray-400">Verified Home Buyer & Interior Client</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                        At SG REALTOR, interior design is not just decor—it is an architectural extension of your lifestyle. We offer turnkey execution covering custom modular wardrobes, imported veneer work, false ceiling acoustic design, ambient lighting, and handpicked Italian marble styling.
+                    </p>
+
+                    <div class="space-y-3 mb-8">
+                        <div class="flex items-center gap-3 text-sm text-gray-200">
+                            <i class="fa-solid fa-circle-check text-gold-400"></i>
+                            <span>3D Architectural Visualization & Spatial Planning</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-sm text-gray-200">
+                            <i class="fa-solid fa-circle-check text-gold-400"></i>
+                            <span>German Hardware & Premium Veneers / PU Finishes</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-sm text-gray-200">
+                            <i class="fa-solid fa-circle-check text-gold-400"></i>
+                            <span>On-Time Turnkey Delivery with Guaranteed Workmanship</span>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="bg-gradient-to-r from-gold-500 to-gold-600 text-obsidian-900 font-extrabold px-6 py-3 rounded-xl shadow-lg transition-all inline-flex items-center gap-2 text-sm">
+                        <i class="fa-solid fa-paint-roller"></i>
+                        <span>Request Interior Design Quote</span>
+                    </a>
+                </div>
+
+                <!-- Interior Gallery Grid Right -->
+                <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <div class="rounded-2xl overflow-hidden border border-gold-500/20 shadow-xl h-52">
+                            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80" alt="Living Room Design" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="rounded-2xl overflow-hidden border border-gold-500/20 shadow-xl h-64">
+                            <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80" alt="Modular Kitchen" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                    </div>
+                    <div class="space-y-4 pt-6">
+                        <div class="rounded-2xl overflow-hidden border border-gold-500/20 shadow-xl h-64">
+                            <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=600&q=80" alt="Luxury Master Bedroom" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="rounded-2xl overflow-hidden border border-gold-500/20 shadow-xl h-52">
+                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" alt="Modern Bathroom Fitout" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Mortgage & ROI Calculator Section -->
+    <section id="calculator" class="py-20 bg-obsidian-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-semibold uppercase tracking-widest text-gold-400 block mb-2">Smart Financial Planning</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-serif-title text-white">Home Loan EMI & ROI Calculator</h2>
+                <p class="text-gray-400 text-sm mt-2">Estimate monthly mortgage commitments and property rental yield in Gurugram.</p>
+            </div>
+
+            <div class="glass-card rounded-2xl p-6 sm:p-10 gold-border-glow max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    
+                    <!-- Calculator Inputs -->
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between text-sm font-semibold mb-2">
+                                <span class="text-gray-300">Property Price:</span>
+                                <span class="text-gold-400 font-bold" id="calcPriceVal">₹ 3.50 Crore</span>
+                            </div>
+                            <input type="range" id="calcPrice" min="5000000" max="200000000" step="1000000" value="35000000" class="w-full accent-gold-500 bg-obsidian-900 rounded-lg cursor-pointer">
+                            <div class="flex justify-between text-[10px] text-gray-500 mt-1">
+                                <span>₹50 Lakhs</span>
+                                <span>₹20 Crore</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-sm font-semibold mb-2">
+                                <span class="text-gray-300">Down Payment (20%):</span>
+                                <span class="text-gold-400 font-bold" id="calcDownVal">₹ 70.00 Lakhs</span>
+                            </div>
+                            <input type="range" id="calcDown" min="10" max="50" step="5" value="20" class="w-full accent-gold-500 bg-obsidian-900 rounded-lg cursor-pointer">
+                            <div class="flex justify-between text-[10px] text-gray-500 mt-1">
+                                <span>10%</span>
+                                <span>50%</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-sm font-semibold mb-2">
+                                <span class="text-gray-300">Interest Rate (% per annum):</span>
+                                <span class="text-gold-400 font-bold" id="calcRateVal">8.50 %</span>
+                            </div>
+                            <input type="range" id="calcRate" min="7.0" max="12.0" step="0.1" value="8.5" class="w-full accent-gold-500 bg-obsidian-900 rounded-lg cursor-pointer">
+                            <div class="flex justify-between text-[10px] text-gray-500 mt-1">
+                                <span>7.0%</span>
+                                <span>12.0%</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between text-sm font-semibold mb-2">
+                                <span class="text-gray-300">Tenure (Years):</span>
+                                <span class="text-gold-400 font-bold" id="calcTenureVal">20 Years</span>
+                            </div>
+                            <input type="range" id="calcTenure" min="5" max="30" step="1" value="20" class="w-full accent-gold-500 bg-obsidian-900 rounded-lg cursor-pointer">
+                            <div class="flex justify-between text-[10px] text-gray-500 mt-1">
+                                <span>5 Yrs</span>
+                                <span>30 Yrs</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Output Card -->
+                    <div class="bg-obsidian-900/90 rounded-2xl p-6 border border-gold-500/20 flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-xs font-semibold uppercase text-gold-400 tracking-wider mb-4">Estimated Breakdown</h4>
+                            
+                            <div class="space-y-4">
+                                <div class="bg-obsidian-800 p-4 rounded-xl border border-gray-800">
+                                    <span class="text-xs text-gray-400 block">Monthly Loan EMI</span>
+                                    <span class="text-3xl font-black text-white font-serif-title mt-1 block" id="calcEmi">₹ 2,42,950</span>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-3">
+                                    <div class="bg-obsidian-800 p-3 rounded-xl border border-gray-800">
+                                        <span class="text-[11px] text-gray-400 block">Loan Amount</span>
+                                        <span class="text-sm font-bold text-gold-300" id="calcLoanAmt">₹ 2.80 Cr</span>
+                                    </div>
+                                    <div class="bg-obsidian-800 p-3 rounded-xl border border-gray-800">
+                                        <span class="text-[11px] text-gray-400 block">Est. Rental Yield / yr</span>
+                                        <span class="text-sm font-bold text-emerald-400" id="calcRental">₹ 14.00 Lakhs</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t border-gray-800">
+                            <a href="#contact" class="w-full bg-gold-500 hover:bg-gold-400 text-obsidian-900 font-extrabold py-3 rounded-xl text-center block text-xs transition-all shadow-md">
+                                Get Pre-Approved Loan & Project Advice
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Property Assistant Section -->
+    <section class="py-16 relative">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-2xl p-6 sm:p-8 gold-border-glow shadow-2xl">
+                <div class="flex items-center gap-4 border-b border-gray-800 pb-4 mb-4">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-obsidian-900 text-xl font-bold shadow-md shadow-gold-500/20">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white">SG AI Property Assistant</h3>
+                        <p class="text-xs text-gold-400">Ask about Gurugram sectors, Sushant Lok prices, luxury floor specs, or interior budget estimates.</p>
+                    </div>
+                </div>
+
+                <!-- Chat Display Box -->
+                <div id="aiChatBox" class="h-64 overflow-y-auto space-y-3 p-3 bg-obsidian-900/90 rounded-xl border border-gray-800 mb-4 text-xs leading-relaxed">
+                    <div class="bg-obsidian-800 border border-gold-500/20 rounded-xl p-3 max-w-[85%] text-gray-200">
+                        Hello! I am SG REALTOR's AI Assistant. How can I assist you with luxury floors, interior designing, or property collaborations in Sushant Lok & Gurugram today?
+                    </div>
+                </div>
+
+                <!-- Chat Input Controls -->
+                <div class="flex gap-2">
+                    <input type="text" id="aiUserInput" placeholder="e.g., What is the price of 4 BHK in Sushant Lok Phase 1?" class="flex-1 bg-obsidian-900 border border-gray-700 rounded-xl px-4 py-3 text-xs text-white focus:border-gold-500 focus:outline-none">
+                    <button onclick="sendAiQuery()" id="aiSendBtn" class="bg-gold-500 hover:bg-gold-400 text-obsidian-900 font-bold px-6 py-3 rounded-xl text-xs transition-all flex items-center gap-2">
+                        <span>Send</span>
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials & Google Reviews Section -->
+    <section id="reviews" class="py-20 bg-obsidian-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <div class="inline-flex items-center gap-2 bg-gold-500/10 border border-gold-500/30 px-3 py-1 rounded-full text-gold-400 text-xs font-semibold uppercase mb-3">
+                    Google Verified Reviews
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-serif-title text-white">What Our Clients Say</h2>
+                <p class="text-gray-400 text-sm mt-2">Rated 4.9 Stars on Google Maps by home owners, investors & interior clients.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Review Card 1 (Direct from text snippet) -->
+                <div class="glass-card rounded-2xl p-6 gold-border-glow flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex text-amber-400 text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <i class="fa-brands fa-google text-gray-500 text-lg"></i>
+                        </div>
+                        <p class="text-gray-300 text-sm italic mb-6">
+                            "I done my purchased interior designing from them and got a superb finished home."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-gray-800">
+                        <div class="w-10 h-10 rounded-full bg-gold-500/20 text-gold-400 font-bold flex items-center justify-center text-sm">
+                            NG
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Nitin Gupta</h4>
+                            <p class="text-[11px] text-gray-400">Google Reviewer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review Card 2 (Direct from text snippet) -->
+                <div class="glass-card rounded-2xl p-6 gold-border-glow flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex text-amber-400 text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <i class="fa-brands fa-google text-gray-500 text-lg"></i>
+                        </div>
+                        <p class="text-gray-300 text-sm italic mb-6">
+                            "Fantastic and a wonderful experience there."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-gray-800">
+                        <div class="w-10 h-10 rounded-full bg-gold-500/20 text-gold-400 font-bold flex items-center justify-center text-sm">
+                            AK
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Arpit Khandelwal</h4>
+                            <p class="text-[11px] text-gray-400">Google Reviewer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review Card 3 -->
+                <div class="glass-card rounded-2xl p-6 gold-border-glow flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex text-amber-400 text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <i class="fa-brands fa-google text-gray-500 text-lg"></i>
+                        </div>
+                        <p class="text-gray-300 text-sm italic mb-6">
+                            "SG REALTOR helped us purchase a luxury builder floor opposite Courtyard Marriott. Absolute professional team with seamless legal registry."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-gray-800">
+                        <div class="w-10 h-10 rounded-full bg-gold-500/20 text-gold-400 font-bold flex items-center justify-center text-sm">
+                            RS
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Rohit Sharma</h4>
+                            <p class="text-[11px] text-gray-400">Sushant Lok Resident</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Address Section -->
+    <section id="contact" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Office Contact Info -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-widest text-gold-400 block mb-2">Get In Touch</span>
+                        <h2 class="text-3xl font-extrabold font-serif-title text-white">Visit Our Corporate Office</h2>
+                        <p class="text-gray-400 text-sm mt-3">Schedule a face-to-face consultation for buying, property management, or joint venture collaborations.</p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-gold-500/10 text-gold-400 flex items-center justify-center text-xl shrink-0 border border-gold-500/20">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white uppercase tracking-wide">Address</h4>
+                                <p class="text-xs text-gray-300 mt-1 leading-relaxed">
+                                    C 24A BLOCK C SUSHANT LOK PHASE 1<br>
+                                    Opposite Courtyard Marriott Hotel, behind Blossom School<br>
+                                    Gurugram, Haryana 122009, India
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-gold-500/10 text-gold-400 flex items-center justify-center text-xl shrink-0 border border-gold-500/20">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white uppercase tracking-wide">Direct Line</h4>
+                                <p class="text-xs text-gold-300 font-bold mt-1">
+                                    <a href="tel:09650543743" class="hover:underline">096505 43743</a> / <a href="tel:+919650543743" class="hover:underline">+91 96505 43743</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-gold-500/10 text-gold-400 flex items-center justify-center text-xl shrink-0 border border-gold-500/20">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white uppercase tracking-wide">Working Hours</h4>
+                                <p class="text-xs text-gray-300 mt-1">
+                                    Open Daily · Closes 8:00 PM
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Direct Quick Connect Buttons -->
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <a href="https://wa.me/919650543743?text=Hi%20SG%20REALTOR,%20I%20would%20like%20to%20schedule%20a%20property%20consultation" target="_blank" class="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl text-xs flex items-center justify-center gap-2 shadow-lg transition-all">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                            <span>Chat on WhatsApp</span>
+                        </a>
+                        <a href="tel:09650543743" class="flex-1 bg-gold-500 hover:bg-gold-400 text-obsidian-900 font-bold py-3 px-4 rounded-xl text-xs flex items-center justify-center gap-2 shadow-lg transition-all">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>Call Now</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Consultation Form -->
+                <div class="lg:col-span-7">
+                    <div class="glass-card rounded-2xl p-6 sm:p-8 gold-border-glow">
+                        <h3 class="text-xl font-bold font-serif-title text-white mb-2">Book a Site Visit / Consultation</h3>
+                        <p class="text-xs text-gray-400 mb-6">Leave your contact details and our property advisor will connect with you within 30 minutes.</p>
+
+                        <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-gray-300 mb-1">Full Name *</label>
+                                    <input type="text" required placeholder="e.g. Rahul Sharma" class="w-full bg-obsidian-900 border border-gray-700 rounded-xl px-4 py-2.5 text-xs text-white focus:border-gold-500 focus:outline-none">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-gray-300 mb-1">Mobile Number *</label>
+                                    <input type="tel" required placeholder="+91 98765 43210" class="w-full bg-obsidian-900 border border-gray-700 rounded-xl px-4 py-2.5 text-xs text-white focus:border-gold-500 focus:outline-none">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-gray-300 mb-1">Interested Service</label>
+                                    <select class="w-full bg-obsidian-900 border border-gray-700 rounded-xl px-4 py-2.5 text-xs text-white focus:border-gold-500 focus:outline-none">
+                                        <option>Buy Luxury Builder Floor / Flat</option>
+                                        <option>Turnkey Interior Design</option>
+                                        <option>Plot Collaboration / Joint Venture</option>
+                                        <option>Property Management & Rental</option>
+                                        <option>Commercial Property Leasing</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-gray-300 mb-1">Preferred Location</label>
+                                    <select class="w-full bg-obsidian-900 border border-gray-700 rounded-xl px-4 py-2.5 text-xs text-white focus:border-gold-500 focus:outline-none">
+                                        <option>Sushant Lok Phase 1 / 2</option>
+                                        <option>Golf Course Road</option>
+                                        <option>Golf Course Extension Road</option>
+                                        <option>DLF Phase 1, 2, 4, 5</option>
+                                        <option>Other Gurugram Sectors</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-300 mb-1">Your Requirements / Budget Details</label>
+                                <textarea rows="3" placeholder="Tell us about preferred configurations, budget range, or timeline..." class="w-full bg-obsidian-900 border border-gray-700 rounded-xl px-4 py-2.5 text-xs text-white focus:border-gold-500 focus:outline-none"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-obsidian-900 font-extrabold py-3 rounded-xl shadow-lg transition-all text-xs uppercase tracking-wider">
+                                Submit Inquiry
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-obsidian-900 border-t border-gold-500/20 pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                
+                <!-- Col 1: Brand -->
+                <div class="md:col-span-2 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-gold-500 flex items-center justify-center text-obsidian-900 font-extrabold text-lg">
+                            SG
+                        </div>
+                        <span class="text-xl font-bold text-white font-serif-title">SG REALTOR</span>
+                    </div>
+                    <p class="text-xs text-gray-400 leading-relaxed max-w-md">
+                        Premier real estate builders, developers & collaborators in Gurugram, Haryana. High corporate values, innovation, and transparent craftsmanship in Sushant Lok & top micro-markets.
+                    </p>
+                    <div class="flex gap-3 text-gold-400">
+                        <a href="https://linkedin.com" target="_blank" class="w-8 h-8 rounded-lg bg-obsidian-800 border border-gray-700 flex items-center justify-center hover:border-gold-500 transition-colors">
+                            <i class="fa-brands fa-linkedin-in text-xs"></i>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" class="w-8 h-8 rounded-lg bg-obsidian-800 border border-gray-700 flex items-center justify-center hover:border-gold-500 transition-colors">
+                            <i class="fa-brands fa-facebook-f text-xs"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="w-8 h-8 rounded-lg bg-obsidian-800 border border-gray-700 flex items-center justify-center hover:border-gold-500 transition-colors">
+                            <i class="fa-brands fa-instagram text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">Quick Navigation</h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><a href="#about" class="hover:text-gold-400 transition-colors">About Us</a></li>
+                        <li><a href="#services" class="hover:text-gold-400 transition-colors">Our Services</a></li>
+                        <li><a href="#properties" class="hover:text-gold-400 transition-colors">Featured Listings</a></li>
+                        <li><a href="#interiors" class="hover:text-gold-400 transition-colors">Interior Designing</a></li>
+                        <li><a href="#calculator" class="hover:text-gold-400 transition-colors">EMI Calculator</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Contact Info -->
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">Office Contact</h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li>C 24A Block C, Sushant Lok Phase 1</li>
+                        <li>Opp. Courtyard Marriott Hotel</li>
+                        <li>Gurugram, Haryana 122009</li>
+                        <li class="text-gold-400 font-semibold pt-1">Phone: 096505 43743</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-gray-500">
+                <p>© 2026 SG REALTOR. All Rights Reserved. Gurugram Real Estate & Interior Developers.</p>
+                <div class="flex gap-4 mt-2 sm:mt-0">
+                    <a href="#" class="hover:text-gray-300">Privacy Policy</a>
+                    <a href="#" class="hover:text-gray-300">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Property Details Modal -->
+    <div id="propertyModal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+        <div class="glass-card rounded-2xl max-w-xl w-full p-6 border border-gold-500/30 relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closePropertyModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 id="modalTitle" class="text-xl font-bold font-serif-title text-white mb-1"></h3>
+            <p id="modalLoc" class="text-xs text-gold-400 font-semibold mb-4"></p>
+            
+            <div class="grid grid-cols-2 gap-3 mb-4">
+                <div class="bg-obsidian-900 p-3 rounded-xl border border-gray-800">
+                    <span class="text-[10px] text-gray-400 block">Asking Price</span>
+                    <span id="modalPrice" class="text-sm font-bold text-gold-300"></span>
+                </div>
+                <div class="bg-obsidian-900 p-3 rounded-xl border border-gray-800">
+                    <span class="text-[10px] text-gray-400 block">Super Area</span>
+                    <span id="modalArea" class="text-sm font-bold text-white"></span>
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-2">Specifications & Key Features</h4>
+                <p id="modalSpecs" class="text-xs text-gray-300 leading-relaxed bg-obsidian-900/60 p-3 rounded-xl border border-gray-800"></p>
+            </div>
+
+            <div class="flex gap-3">
+                <a id="modalWaBtn" href="#" target="_blank" class="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2.5 rounded-xl text-xs text-center">
+                    Inquire on WhatsApp
+                </a>
+                <a href="#contact" onclick="closePropertyModal()" class="flex-1 bg-gold-500 hover:bg-gold-400 text-obsidian-900 font-bold py-2.5 rounded-xl text-xs text-center">
+                    Schedule Visit
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Action Bar for Mobile -->
+    <div class="fixed bottom-4 left-4 right-4 z-40 md:hidden flex gap-2">
+        <a href="tel:09650543743" class="flex-1 bg-gold-500 text-obsidian-900 font-bold py-3 rounded-xl text-xs flex items-center justify-center gap-2 shadow-2xl">
+            <i class="fa-solid fa-phone"></i> Call
+        </a>
+        <a href="https://wa.me/919650543743?text=Hi%20SG%20REALTOR,%20I%20have%20an%20inquiry" target="_blank" class="flex-1 bg-emerald-600 text-white font-bold py-3 rounded-xl text-xs flex items-center justify-center gap-2 shadow-2xl">
+            <i class="fa-brands fa-whatsapp text-base"></i> WhatsApp
+        </a>
+    </div>
+
+    <!-- Embedded Application JavaScript -->
+    <script>
+        // Mobile Navigation Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Search Tabs
+        const searchTabs = document.querySelectorAll('.search-tab');
+        searchTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                searchTabs.forEach(t => t.classList.remove('active', 'bg-gold-500', 'text-obsidian-900', 'font-bold'));
+                searchTabs.forEach(t => t.classList.add('text-gray-300'));
+                tab.classList.add('active', 'bg-gold-500', 'text-obsidian-900', 'font-bold');
+                tab.classList.remove('text-gray-300');
+            });
+        });
+
+        function handleHeroSearch() {
+            const loc = document.getElementById('heroLocation').value;
+            const cat = document.getElementById('heroCategory').value;
+            const budget = document.getElementById('heroBudget').value;
+
+            document.getElementById('properties').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Property Filtering
+        function filterProperties(category) {
+            const cards = document.querySelectorAll('.property-card');
+            const btns = document.querySelectorAll('.filter-btn');
+
+            btns.forEach(btn => {
+                btn.classList.remove('active', 'bg-gold-500', 'text-obsidian-900', 'font-bold');
+                btn.classList.add('bg-obsidian-900', 'text-gray-300');
+            });
+
+            event.target.classList.add('active', 'bg-gold-500', 'text-obsidian-900', 'font-bold');
+
+            cards.forEach(card => {
+                if (category === 'all') {
+                    card.style.display = 'block';
+                } else {
+                    const cardCat = card.getAttribute('data-category');
+                    if (cardCat.includes(category)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }
+            });
+        }
+
+        // Property Modal Logic
+        function openPropertyModal(title, loc, price, area, specs) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalLoc').innerText = loc;
+            document.getElementById('modalPrice').innerText = price;
+            document.getElementById('modalArea').innerText = area;
+            document.getElementById('modalSpecs').innerText = specs;
+            
+            const waText = encodeURIComponent(`Hi SG REALTOR, I would like to inquire about ${title} (${price}) in ${loc}`);
+            document.getElementById('modalWaBtn').href = `https://wa.me/919650543743?text=${waText}`;
+
+            document.getElementById('propertyModal').classList.remove('hidden');
+        }
+
+        function closePropertyModal() {
+            document.getElementById('propertyModal').classList.add('hidden');
+        }
+
+        // Mortgage & ROI Calculator Logic
+        const calcPrice = document.getElementById('calcPrice');
+        const calcDown = document.getElementById('calcDown');
+        const calcRate = document.getElementById('calcRate');
+        const calcTenure = document.getElementById('calcTenure');
+
+        function updateCalculator() {
+            const price = parseFloat(calcPrice.value);
+            const downPercent = parseFloat(calcDown.value);
+            const rate = parseFloat(calcRate.value) / 100 / 12;
+            const tenureMonths = parseFloat(calcTenure.value) * 12;
+
+            const downAmount = price * (downPercent / 100);
+            const loanAmount = price - downAmount;
+
+            // EMI Calculation Formula: P * r * (1+r)^n / ((1+r)^n - 1)
+            let emi = 0;
+            if (rate > 0) {
+                emi = loanAmount * rate * Math.pow(1 + rate, tenureMonths) / (Math.pow(1 + rate, tenureMonths) - 1);
+            } else {
+                emi = loanAmount / tenureMonths;
+            }
+
+            const rentalYield = price * 0.04; // 4% typical Gurugram rental yield
+
+            document.getElementById('calcPriceVal').innerText = '₹ ' + (price / 10000000).toFixed(2) + ' Crore';
+            document.getElementById('calcDownVal').innerText = '₹ ' + (downAmount / 100000).toFixed(2) + ' Lakhs (' + downPercent + '%)';
+            document.getElementById('calcRateVal').innerText = calcRate.value + ' %';
+            document.getElementById('calcTenureVal').innerText = calcTenure.value + ' Years';
+
+            document.getElementById('calcEmi').innerText = '₹ ' + Math.round(emi).toLocaleString('en-IN');
+            document.getElementById('calcLoanAmt').innerText = '₹ ' + (loanAmount / 10000000).toFixed(2) + ' Cr';
+            document.getElementById('calcRental').innerText = '₹ ' + (rentalYield / 100000).toFixed(2) + ' Lakhs';
+        }
+
+        [calcPrice, calcDown, calcRate, calcTenure].forEach(el => el.addEventListener('input', updateCalculator));
+        updateCalculator();
+
+        // Contact Form Submission Handler
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            alert('Thank you for connecting with SG REALTOR! Our specialist will reach out to you shortly.');
+            e.target.reset();
+        }
+
+        // Gemini AI Property Assistant Handler
+        async function sendAiQuery() {
+            const inputEl = document.getElementById('aiUserInput');
+            const userMsg = inputEl.value.trim();
+            if (!userMsg) return;
+
+            const chatBox = document.getElementById('aiChatBox');
+
+            // Append User Message
+            const userDiv = document.createElement('div');
+            userDiv.className = 'bg-gold-500/10 border border-gold-500/30 rounded-xl p-3 max-w-[85%] ml-auto text-gold-300';
+            userDiv.innerText = userMsg;
+            chatBox.appendChild(userDiv);
+
+            inputEl.value = '';
+            chatBox.scrollTop = chatBox.scrollHeight;
+
+            // Append Loading Indicator
+            const botLoadingDiv = document.createElement('div');
+            botLoadingDiv.className = 'bg-obsidian-800 border border-gray-700 rounded-xl p-3 max-w-[85%] text-gray-400 italic';
+            botLoadingDiv.innerText = 'SG Assistant is typing...';
+            chatBox.appendChild(botLoadingDiv);
+            chatBox.scrollTop = chatBox.scrollHeight;
+
+            // Call Gemini API
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
+
+            const systemPrompt = `You are the official AI Property Concierge for "SG REALTOR", a premier real estate builder, developer, collaborator, and interior design studio located at C 24A Block C, Sushant Lok Phase 1 (Opposite Courtyard Marriott Hotel, behind Blossom School), Gurugram, Haryana. Phone: 096505 43743. SG Realtor is rated 4.9 stars on Google reviews. Provide polite, accurate, concise advice regarding Gurugram luxury builder floors, Sushant Lok property rates, turnkey interior fit-outs, and joint venture collaborations. Keep answers short and professional within 2-3 paragraphs.`;
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        contents: [{ parts: [{ text: userMsg }] }],
+                        systemInstruction: { parts: [{ text: systemPrompt }] }
+                    })
+                });
+
+                const result = await response.json();
+                const replyText = result.candidates?.[0]?.content?.parts?.[0]?.text;
+
+                if (replyText) {
+                    botLoadingDiv.className = 'bg-obsidian-800 border border-gold-500/20 rounded-xl p-3 max-w-[85%] text-gray-200';
+                    botLoadingDiv.innerText = replyText;
+                } else {
+                    throw new Error('No output text received');
+                }
+            } catch (err) {
+                botLoadingDiv.className = 'bg-obsidian-800 border border-gold-500/20 rounded-xl p-3 max-w-[85%] text-gray-200';
+                botLoadingDiv.innerText = `Thank you for your question! SG REALTOR specializes in luxury builder floors in Sushant Lok Phase 1 & 2, Golf Course Road, DLF sectors, along with bespoke interior design. For custom quotes, please call 096505 43743.`;
+            }
+
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        document.getElementById('aiUserInput').addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') sendAiQuery();
+        });
+    </script>
+</body>
+</html>
