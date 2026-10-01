@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maestro Realtor | Premier Real Estate Agency Aligarh - Duplex, Flats & Commercial</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        maestro: {
+                            navy: '#0A1128',
+                            dark: '#030712',
+                            card: '#111827',
+                            gold: '#EAB308',
+                            goldLight: '#FDE047',
+                            emerald: '#10B981',
+                            surface: '#1F2937',
+                            border: '#374151'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #030712;
+            color: #F9FAFB;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #FACC15 0%, #EAB308 50%, #CA8A04 100%);
+        }
+        .emerald-gradient {
+            background: linear-gradient(135deg, #34D399 0%, #10B981 50%, #059669 100%);
+        }
+        .gold-text {
+            background: linear-gradient(135deg, #FDE047 0%, #EAB308 50%, #CA8A04 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-panel {
+            background: rgba(17, 24, 39, 0.75);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(234, 179, 8, 0.2);
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            border-color: rgba(234, 179, 8, 0.4);
+            transform: translateY(-5px);
+            box-shadow: 0 16px 35px -10px rgba(234, 179, 8, 0.15);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #030712;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #374151;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #EAB308;
+        }
+        .notification-toast {
+            animation: slideIn 0.3s ease-out forwards;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-yellow-500 selection:text-black">
+
+    <div class="bg-gradient-to-r from-slate-900 via-amber-950/80 to-slate-900 text-slate-200 text-xs py-2.5 px-4 border-b border-amber-500/20">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center space-x-3">
+                <span class="bg-amber-500/20 text-yellow-300 text-[11px] px-2.5 py-0.5 rounded-full font-bold border border-amber-500/40 flex items-center gap-1">
+                    <i class="fas fa-certificate text-[10px]"></i> ALIGARH'S #1 REAL ESTATE AGENCY
+                </span>
+                <span class="hidden sm:inline text-slate-300">Duplexes • Fully Furnished Flats • Commercial Properties</span>
+            </div>
+            <div class="flex items-center space-x-6 font-semibold">
+                <span class="flex items-center gap-1.5 text-amber-400"><i class="fab fa-instagram text-sm"></i> 50.7K Followers</span>
+                <span class="hidden md:flex items-center gap-1 text-slate-300"><i class="far fa-clock text-amber-400"></i> Open Today: Closes 6 PM</span>
+                <a href="tel:08586925762" class="hover:underline text-yellow-400 font-bold flex items-center gap-1">
+                    <i class="fas fa-phone-alt text-xs"></i> 85869 25762
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <header class="sticky top-0 z-50 glass-panel border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="w-12 h-12 rounded-xl gold-gradient flex items-center justify-center text-slate-950 font-black text-2xl shadow-lg shadow-yellow-500/20 group-hover:scale-105 transition-transform">
+                        M
+                    </div>
+                    <div>
+                        <div class="font-serif text-xl sm:text-2xl font-bold tracking-wide text-white flex items-center gap-1.5">
+                            MAESTRO <span class="gold-text">REALTOR</span>
+                        </div>
+                        <div class="text-[10px] tracking-widest text-slate-400 uppercase font-bold">Property Consultants Aligarh</div>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center space-x-7 text-sm font-semibold">
+                    <a href="#properties" class="text-slate-200 hover:text-amber-400 transition-colors">Properties</a>
+                    <a href="#featured-duplex" class="text-slate-200 hover:text-amber-400 transition-colors flex items-center gap-1">
+                        <span class="bg-red-500/20 text-red-400 text-[10px] px-1.5 py-0.5 rounded font-bold uppercase">New</span> 3 BHK Duplex
+                    </a>
+                    <a href="#instagram" class="text-slate-200 hover:text-amber-400 transition-colors flex items-center gap-1">
+                        <i class="fab fa-instagram text-pink-500"></i> Social Media
+                    </a>
+                    <a href="#reviews" class="text-slate-200 hover:text-amber-400 transition-colors flex items-center gap-1.5">
+                        <i class="fas fa-star text-amber-400 text-xs"></i> 5.0 Rating
+                    </a>
+                    <a href="#contact" class="text-slate-200 hover:text-amber-400 transition-colors">Location & Contact</a>
+                </nav>
+
+                <!-- Action CTA -->
+                <div class="hidden sm:flex items-center space-x-3">
+                    <a href="https://wa.me/918586925762?text=Hello%20Maestro%20Realtor,%20I%20am%20looking%20for%20property%20options%20in%20Aligarh." target="_blank" class="px-4 py-2.5 rounded-xl border border-emerald-500/40 text-emerald-400 hover:bg-emerald-500/10 font-bold text-xs sm:text-sm flex items-center gap-2 transition">
+                        <i class="fab fa-whatsapp text-lg"></i> WhatsApp
+                    </a>
+                    <a href="tel:08586925762" class="px-5 py-2.5 rounded-xl gold-gradient text-slate-950 font-extrabold text-xs sm:text-sm hover:brightness-110 shadow-lg shadow-yellow-500/20 transition">
+                        <i class="fas fa-phone-alt mr-1"></i> Call 8586925762
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="lg:hidden text-slate-300 hover:text-white p-2 text-2xl" aria-label="Open navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#properties" class="block py-2.5 text-slate-200 hover:text-amber-400 border-b border-slate-800 font-semibold">Browse Properties</a>
+            <a href="#featured-duplex" class="block py-2.5 text-slate-200 hover:text-amber-400 border-b border-slate-800 font-semibold">Featured 3 BHK Duplex</a>
+            <a href="#instagram" class="block py-2.5 text-slate-200 hover:text-amber-400 border-b border-slate-800 font-semibold">Instagram Community (50.7K)</a>
+            <a href="#reviews" class="block py-2.5 text-slate-200 hover:text-amber-400 border-b border-slate-800 font-semibold">5.0 Star Client Reviews</a>
+            <a href="#contact" class="block py-2.5 text-slate-200 hover:text-amber-400 border-b border-slate-800 font-semibold">FM Tower Office Address</a>
+            <div class="pt-3 flex flex-col gap-2">
+                <a href="tel:08586925762" class="w-full text-center py-3 rounded-xl gold-gradient text-slate-950 font-bold">
+                    <i class="fas fa-phone-alt mr-2"></i> Call Primary: 85869 25762
+                </a>
+                <a href="tel:08881111999" class="w-full text-center py-2.5 rounded-xl border border-slate-700 text-slate-200 font-bold text-xs">
+                    <i class="fas fa-mobile-alt mr-2"></i> Alternate: 88811 11999
+                </a>
+                <a href="https://wa.me/918586925762" target="_blank" class="w-full text-center py-3 rounded-xl bg-emerald-600 text-white font-bold">
+                    <i class="fab fa-whatsapp mr-2"></i> WhatsApp Consultation
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-16 lg:py-24">
+        <!-- Grid Background Pattern -->
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900/90 to-maestro-dark z-10"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(#eab308_1px,transparent_1px)] [background-size:36px_36px] opacity-15"></div>
+        
+        <!-- Glowing Ambient Lighting -->
+        <div class="absolute top-1/4 left-1/3 w-[500px] h-[500px] bg-amber-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-[400px] h-[400px] bg-emerald-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <!-- Trust Tag -->
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel border border-amber-500/40 text-yellow-300 text-xs sm:text-sm font-semibold mb-6 shadow-xl">
+                <i class="fas fa-home text-amber-400"></i>
+                <span>"Help people to make their best property"</span>
+                <span class="bg-amber-500/30 text-yellow-200 text-[10px] px-2 py-0.5 rounded-full uppercase font-bold">Aligarh UP</span>
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="text-3xl sm:text-5xl lg:text-7xl font-extrabold text-white tracking-tight leading-tight max-w-5xl mx-auto">
+                Find Your Perfect <span class="gold-text">Duplex, Flat & Commercial</span> Property in Aligarh
+            </h1>
+
+            <p class="mt-6 text-slate-300 text-base sm:text-xl max-w-3xl mx-auto font-light leading-relaxed">
+                The most trusted real estate consultants in Aligarh. Premium fully furnished 3 BHK duplexes, luxury flats, commercial plots & prime residential spaces in <span class="text-amber-300 font-semibold">Radio Colony, Teachers Colony, FM Tower & Great Bypass Road</span>.
+            </p>
+
+            <!-- Quick Key Metrics -->
+            <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                <div class="p-4 rounded-2xl glass-card text-center">
+                    <div class="text-2xl sm:text-3xl font-extrabold gold-text">50.7K+</div>
+                    <div class="text-xs text-slate-400 mt-1">Instagram Community</div>
+                </div>
+                <div class="p-4 rounded-2xl glass-card text-center">
+                    <div class="text-2xl sm:text-3xl font-extrabold text-amber-400 flex items-center justify-center gap-1">
+                        5.0 <i class="fas fa-star text-amber-400 text-lg"></i>
+                    </div>
+                    <div class="text-xs text-slate-400 mt-1">Google & Justdial Reviews</div>
+                </div>
+                <div class="p-4 rounded-2xl glass-card text-center">
+                    <div class="text-2xl sm:text-3xl font-extrabold gold-text">450+</div>
+                    <div class="text-xs text-slate-400 mt-1">Verified Property Listings</div>
+                </div>
+                <div class="p-4 rounded-2xl glass-card text-center">
+                    <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400">100%</div>
+                    <div class="text-xs text-slate-400 mt-1">Honest & Clear Deals</div>
+                </div>
+            </div>
+
+            <div class="mt-10 max-w-5xl mx-auto bg-slate-900/90 p-5 rounded-2xl border border-amber-500/30 shadow-2xl backdrop-blur-xl">
+                <form id="heroFilterForm" onsubmit="event.preventDefault(); applyHeroFilter();" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 text-left mb-1">Property Type</label>
+                        <select id="heroType" class="w-full bg-slate-800 border border-slate-700 text-white rounded-xl px-3 py-2.5 text-sm focus:border-amber-500 focus:outline-none font-medium">
+                            <option value="all">All Types</option>
+                            <option value="Duplex">Duplex House</option>
+                            <option value="Flat">Flats / Apartments (2/3 BHK)</option>
+                            <option value="Commercial">Commercial Shop / Office</option>
+                            <option value="Plot">Residential Plot / Land</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 text-left mb-1">Locality in Aligarh</label>
+                        <select id="heroLocality" class="w-full bg-slate-800 border border-slate-700 text-white rounded-xl px-3 py-2.5 text-sm focus:border-amber-500 focus:outline-none font-medium">
+                            <option value="all">All Localities</option>
+                            <option value="Radio Colony">Radio Colony / Teachers Colony</option>
+                            <option value="FM Tower">F.M. Tower Area</option>
+                            <option value="Centre Point">Centre Point & Ramghat</option>
+                            <option value="Great Bypass">Great Bypass Road</option>
+                            <option value="GTI Road">G.T. Road Belt</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 text-left mb-1">Budget Range</label>
+                        <select id="heroBudget" class="w-full bg-slate-800 border border-slate-700 text-white rounded-xl px-3 py-2.5 text-sm focus:border-amber-500 focus:outline-none font-medium">
+                            <option value="all">Any Budget</option>
+                            <option value="under50">Under ₹ 50 Lakhs</option>
+                            <option value="50to1cr">₹ 50 Lakhs - ₹ 1.2 Crore</option>
+                            <option value="above1cr">Above ₹ 1.2 Crore</option>
+                        </select>
+                    </div>
+                    <div class="flex items-end">
+                        <button type="submit" class="w-full h-[42px] gold-gradient text-slate-950 font-bold rounded-xl text-sm hover:brightness-110 transition shadow-lg shadow-yellow-500/20 flex items-center justify-center gap-2">
+                            <i class="fas fa-search"></i> Search Properties
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="featured-duplex" class="py-20 bg-slate-900/60 border-y border-slate-800 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-slate-900 via-amber-950/30 to-slate-900 border border-amber-500/40 rounded-3xl p-6 lg:p-10 relative overflow-hidden shadow-2xl">
+                
+                <div class="inline-flex items-center gap-2 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-6">
+                    <i class="fas fa-fire"></i> Fresh Listing (April 2026 Spotlight)
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    
+                    <div class="lg:col-span-7 space-y-5">
+                        <h2 class="text-2xl sm:text-4xl font-extrabold text-white leading-tight">
+                            New 3 BHK Duplex Fully Furnished in <span class="gold-text">Aligarh Prime Belt</span>
+                        </h2>
+                        
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                            Ultra-modern architectural design featuring modular kitchen, royal interior woodwork, Italian floor tiling, double height living room ceiling, and covered car parking. Located in a secure gated community near Radio Colony.
+                        </p>
+
+                        <!-- Key Feature Bullets -->
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
+                            <div class="bg-slate-800/80 p-3 rounded-xl border border-slate-700">
+                                <span class="text-slate-400 text-[11px] block">Configuration</span>
+                                <span class="text-white font-bold text-sm">3 BHK Duplex</span>
+                            </div>
+                            <div class="bg-slate-800/80 p-3 rounded-xl border border-slate-700">
+                                <span class="text-slate-400 text-[11px] block">Furnishing</span>
+                                <span class="text-amber-400 font-bold text-sm">100% Fully Furnished</span>
+                            </div>
+                            <div class="bg-slate-800/80 p-3 rounded-xl border border-slate-700">
+                                <span class="text-slate-400 text-[11px] block">Plot Area</span>
+                                <span class="text-white font-bold text-sm">1,800 Sq. Ft</span>
+                            </div>
+                            <div class="bg-slate-800/80 p-3 rounded-xl border border-slate-700">
+                                <span class="text-slate-400 text-[11px] block">Parking</span>
+                                <span class="text-white font-bold text-sm">Covered SUV Bay</span>
+                            </div>
+                            <div class="bg-slate-800/80 p-3 rounded-xl border border-slate-700">
+                                <span class="text-slate-400 text-[11px] block">Locality</span>
+                                <span class="text-white font-bold text-sm">Radio Colony Belt</span>
+                            </div>
+                            <div class="bg-slate-800/80 p-3 rounded-xl border border-slate-700">
+                                <span class="text-slate-400 text-[11px] block">Loan Approval</span>
+                                <span class="text-emerald-400 font-bold text-sm">Bank Approved</span>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 flex flex-wrap gap-4">
+                            <a href="https://wa.me/918586925762?text=Hi%20Maestro%20Realtor,%20I%20am%20interested%20in%20the%20New%203%20BHK%20Duplex%20Fully%20Furnished%20in%20Aligarh." target="_blank" class="px-6 py-3.5 rounded-xl gold-gradient text-slate-950 font-extrabold text-sm hover:brightness-110 shadow-xl shadow-yellow-500/20 flex items-center gap-2">
+                                <i class="fab fa-whatsapp text-lg"></i> Schedule Site Visit
+                            </a>
+                            <a href="tel:08586925762" class="px-6 py-3.5 rounded-xl border border-amber-500/40 text-amber-300 font-bold text-sm hover:bg-amber-500/10 transition flex items-center gap-2">
+                                <i class="fas fa-phone-alt"></i> Call Agent: 85869 25762
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Media Showcase -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative rounded-2xl overflow-hidden border-2 border-amber-500/30 shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1000&q=80" alt="3 BHK Duplex Fully Furnished Aligarh" class="w-full h-[380px] object-cover" onerror="this.src='https://placehold.co/800x600/111827/ffffff?text=Luxury+Duplex+Aligarh'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+                            
+                            <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl glass-panel">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <p class="text-xs text-amber-300 font-semibold">Maestro Realtor Direct Listing</p>
+                                        <h4 class="text-white font-bold text-sm">3 BHK Premium Duplex Villa</h4>
+                                    </div>
+                                    <span class="text-xs bg-emerald-500/30 text-emerald-300 px-2.5 py-1 rounded-lg font-bold border border-emerald-500/40">Ready to Move</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="properties" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+                <div>
+                    <span class="text-amber-400 font-bold text-xs tracking-widest uppercase">Handpicked Inventory</span>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-1">Featured Properties in Aligarh</h2>
+                    <p class="text-slate-400 text-sm mt-1">Explore verified duplexes, luxury residential apartments, and prime commercial plots.</p>
+                </div>
+                
+                <!-- Category Tabs -->
+                <div class="flex flex-wrap gap-2" id="propertyCategoryTabs">
+                    <button onclick="setCategoryFilter('all', this)" class="cat-btn bg-amber-500 text-slate-950 px-4 py-2 rounded-xl text-xs font-bold transition">All Listings</button>
+                    <button onclick="setCategoryFilter('Duplex', this)" class="cat-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-xl text-xs font-bold transition">Duplexes</button>
+                    <button onclick="setCategoryFilter('Flat', this)" class="cat-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-xl text-xs font-bold transition">Flats / Apartments</button>
+                    <button onclick="setCategoryFilter('Commercial', this)" class="cat-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-xl text-xs font-bold transition">Commercial</button>
+                </div>
+            </div>
+
+            <!-- Grid Container -->
+            <div id="propertyGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Javascript will dynamically render properties -->
+            </div>
+
+            <!-- Empty Results State -->
+            <div id="noPropertyFound" class="hidden text-center py-16">
+                <i class="fas fa-home-exclamation text-5xl text-slate-600 mb-3"></i>
+                <h3 class="text-lg font-bold text-slate-300">No matching properties found</h3>
+                <p class="text-xs text-slate-500 mt-1">Try broadening your search parameters or request a custom inquiry.</p>
+                <button onclick="resetAllFilters()" class="mt-4 px-5 py-2.5 rounded-xl gold-gradient text-slate-950 font-bold text-xs">Reset All Filters</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="instagram" class="py-20 bg-slate-900/50 border-t border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pink-500/10 text-pink-400 text-xs font-bold border border-pink-500/20 mb-3">
+                    <i class="fab fa-instagram"></i> @maestro_realtor
+                </div>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-white">50,700+ Followers On Instagram</h2>
+                <p class="text-slate-400 text-sm sm:text-base mt-2">
+                    Join Aligarh's largest online real estate community. Watch live walk-through property reels, site tours, and new launches daily.
+                </p>
+            </div>
+
+            <!-- Instagram Grid Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="glass-card rounded-2xl p-4 relative group">
+                    <div class="relative h-64 rounded-xl overflow-hidden mb-3">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Instagram Reel Walkthrough" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-slate-950/40 flex items-center justify-center">
+                            <div class="w-12 h-12 rounded-full bg-pink-600/90 text-white flex items-center justify-center text-xl shadow-lg">
+                                <i class="fas fa-play ml-1"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between text-xs text-slate-400">
+                        <span><i class="far fa-heart text-red-400 mr-1"></i> 2.4k Likes</span>
+                        <span><i class="far fa-comment text-slate-400 mr-1"></i> 142 Comments</span>
+                    </div>
+                    <h4 class="text-xs font-bold text-white mt-2 line-clamp-1">3 BHK Luxury Duplex Video Tour in Radio Colony</h4>
+                </div>
+
+                <div class="glass-card rounded-2xl p-4 relative group">
+                    <div class="relative h-64 rounded-xl overflow-hidden mb-3">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80" alt="Instagram Villa Showcase" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-slate-950/40 flex items-center justify-center">
+                            <div class="w-12 h-12 rounded-full bg-pink-600/90 text-white flex items-center justify-center text-xl shadow-lg">
+                                <i class="fas fa-play ml-1"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between text-xs text-slate-400">
+                        <span><i class="far fa-heart text-red-400 mr-1"></i> 1.8k Likes</span>
+                        <span><i class="far fa-comment text-slate-400 mr-1"></i> 89 Comments</span>
+                    </div>
+                    <h4 class="text-xs font-bold text-white mt-2 line-clamp-1">Fully Furnished Apartment Interior Reveal</h4>
+                </div>
+
+                <div class="glass-card rounded-2xl p-4 relative group">
+                    <div class="relative h-64 rounded-xl overflow-hidden mb-3">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=600&q=80" alt="Commercial Property Showcase" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-slate-950/40 flex items-center justify-center">
+                            <div class="w-12 h-12 rounded-full bg-pink-600/90 text-white flex items-center justify-center text-xl shadow-lg">
+                                <i class="fas fa-play ml-1"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between text-xs text-slate-400">
+                        <span><i class="far fa-heart text-red-400 mr-1"></i> 3.1k Likes</span>
+                        <span><i class="far fa-comment text-slate-400 mr-1"></i> 210 Comments</span>
+                    </div>
+                    <h4 class="text-xs font-bold text-white mt-2 line-clamp-1">Commercial Space near FM Tower Main Road</h4>
+                </div>
+
+                <div class="glass-card rounded-2xl p-4 relative group">
+                    <div class="relative h-64 rounded-xl overflow-hidden mb-3">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80" alt="Client Key Handover" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-slate-950/40 flex items-center justify-center">
+                            <div class="w-12 h-12 rounded-full bg-pink-600/90 text-white flex items-center justify-center text-xl shadow-lg">
+                                <i class="fas fa-heart text-red-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between text-xs text-slate-400">
+                        <span><i class="far fa-heart text-red-400 mr-1"></i> 4.5k Likes</span>
+                        <span><i class="far fa-comment text-slate-400 mr-1"></i> 320 Comments</span>
+                    </div>
+                    <h4 class="text-xs font-bold text-white mt-2 line-clamp-1">Happy Family Home Delivery Key Handover Moment</h4>
+                </div>
+
+            </div>
+
+            <div class="mt-10 text-center">
+                <a href="https://instagram.com" target="_blank" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-pink-600 via-purple-600 to-amber-500 text-white font-extrabold text-sm hover:opacity-90 transition shadow-xl">
+                    <i class="fab fa-instagram text-lg"></i> Follow @maestro_realtor on Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-20 relative bg-maestro-navy/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Dual Badge Rating Card -->
+            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-10 mb-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl">
+                
+                <!-- Google Rating -->
+                <div class="flex items-center space-x-5">
+                    <div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center p-2.5 shadow-md shrink-0">
+                        <svg class="w-full h-full" viewBox="0 0 24 24">
+                            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-3xl font-black text-white">5.0</span>
+                            <div class="flex text-amber-400 text-base">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-300 font-bold mt-0.5">37 Verified Google Reviews</p>
+                        <p class="text-[11px] text-slate-400">Maestro Realtor • Aligarh, UP</p>
+                    </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="hidden md:block w-px h-16 bg-slate-800"></div>
+
+                <!-- Justdial Rating -->
+                <div class="flex items-center space-x-5">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-500 text-slate-950 flex items-center justify-center font-black text-2xl shadow-md shrink-0">
+                        JD
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-3xl font-black text-white">5.0 / 5</span>
+                            <div class="flex text-amber-400 text-base">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-300 font-bold mt-0.5">38 Justdial Votes</p>
+                        <p class="text-[11px] text-slate-400">100% Satisfaction Rate</p>
+                    </div>
+                </div>
+
+                <div>
+                    <a href="#lead-section" class="px-5 py-3 rounded-xl gold-gradient text-slate-950 font-bold text-xs shadow-lg hover:brightness-110 block text-center">
+                        Consult Our Experts
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <h3 class="text-2xl font-bold text-white">What Clients Say About Maestro Realtor</h3>
+                <p class="text-slate-400 text-xs sm:text-sm mt-1">Honest feedback from homebuyers and property investors across Aligarh.</p>
+            </div>
+
+            <!-- Review Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <div class="glass-card p-6 rounded-2xl relative">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-amber-500/20 text-yellow-300 font-bold flex items-center justify-center">
+                                MS
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">Mohd. Sufiyan</h4>
+                                <span class="text-[10px] text-slate-400">Radio Colony Homeowner</span>
+                            </div>
+                        </div>
+                        <div class="text-amber-400 text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    </div>
+                    <p class="text-xs text-slate-300 italic leading-relaxed">
+                        "The people are very good and work very honestly. They helped me get a clear title duplex near Radio Colony without any broker hassle."
+                    </p>
+                    <span class="text-[10px] text-slate-500 block mt-4"><i class="fab fa-google text-slate-400 mr-1"></i> Verified Google Review</span>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl relative">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-300 font-bold flex items-center justify-center">
+                                AG
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">Anuj Gupta</h4>
+                                <span class="text-[10px] text-slate-400">3 BHK Flat Buyer</span>
+                            </div>
+                        </div>
+                        <div class="text-amber-400 text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    </div>
+                    <p class="text-xs text-slate-300 italic leading-relaxed">
+                        "Helped me find my dream home quickly and efficiently. Best real estate agency in Aligarh which provides best services with best in market rates."
+                    </p>
+                    <span class="text-[10px] text-slate-500 block mt-4"><i class="fab fa-google text-slate-400 mr-1"></i> Verified Google Review</span>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl relative">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-blue-500/20 text-blue-300 font-bold flex items-center justify-center">
+                                RK
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">Rohit Khan</h4>
+                                <span class="text-[10px] text-slate-400">Commercial Space Investor</span>
+                            </div>
+                        </div>
+                        <div class="text-amber-400 text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    </div>
+                    <p class="text-xs text-slate-300 italic leading-relaxed">
+                        "Their dedication to ensuring customer satisfaction was truly commendable. Guided through bank loan approvals and registry smoothly."
+                    </p>
+                    <span class="text-[10px] text-slate-500 block mt-4"><i class="fas fa-star-half-alt text-amber-400 mr-1"></i> Verified Justdial Rating</span>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section id="lead-section" class="py-16 bg-slate-900 border-t border-slate-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-panel rounded-3xl p-6 sm:p-10 border border-amber-500/30">
+                <div class="text-center max-w-2xl mx-auto mb-8">
+                    <span class="text-amber-400 text-xs font-semibold uppercase tracking-wider">Fast Dedicated Callback</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">Request a Call From Maestro Realtor</h2>
+                    <p class="text-xs sm:text-sm text-slate-400 mt-1">Tell us your budget and requirements. Our senior property consultants will get back to you with top verified listings in Aligarh within 15 minutes.</p>
+                </div>
+
+                <form id="leadForm" onsubmit="handleInquirySubmit(event)" class="space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Your Full Name *</label>
+                            <input type="text" id="leadName" required placeholder="e.g. Dr. Salman Khan" class="w-full bg-slate-800 border border-slate-700 text-white rounded-xl px-4 py-3 text-sm focus:border-amber-500 focus:outline-none font-medium">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Phone Number *</label>
+                            <input type="tel" id="leadPhone" required placeholder="e.g. 085869 25762" class="w-full bg-slate-800 border border-slate-700 text-white rounded-xl px-4 py-3 text-sm focus:border-amber-500 focus:outline-none font-medium">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Interested In</label>
+                            <select id="leadType" class="w-full bg-slate-800 border border-slate-700 text-white rounded-xl px-3 py-3 text-sm focus:border-amber-500 focus:outline-none font-medium">
+                                <option>3 BHK Duplex House</option>
+                                <option>2/3 BHK Apartment Flat</option>
+                                <option>Commercial Shop / Office</option>
+                                <option>Residential Plot</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Preferred Locality</label>
+                            <select id="leadLocation" class="w-full bg-slate-800 border border-slate-700 text-white rounded-xl px-3 py-3 text-sm focus:border-amber-500 focus:outline-none font-medium">
+                                <option>Radio Colony / Teachers Colony</option>
+                                <option>FM Tower Area</option>
+                                <option>Centre Point</option>
+                                <option>Great Bypass Road</option>
+                                <option>G.T. Road</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Approx Budget</label>
+                            <input type="text" id="leadBudget" placeholder="e.g. ₹ 45 Lakhs - ₹ 80 Lakhs" class="w-full bg-slate-800 border border-slate-700 text-white rounded-xl px-4 py-3 text-sm focus:border-amber-500 focus:outline-none font-medium">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Specific Remarks / Message</label>
+                        <textarea id="leadNotes" rows="3" placeholder="Need fully furnished, car parking, corner plot, etc." class="w-full bg-slate-800 border border-slate-700 text-white rounded-xl px-4 py-3 text-sm focus:border-amber-500 focus:outline-none font-medium"></textarea>
+                    </div>
+
+                    <div class="pt-2">
+                        <button type="submit" class="w-full py-3.5 rounded-xl gold-gradient text-slate-950 font-extrabold text-base hover:brightness-110 transition shadow-xl shadow-yellow-500/20 flex items-center justify-center gap-2">
+                            <i class="fas fa-paper-plane"></i> Send Requirement to Maestro Realtor
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-maestro-dark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Contact Details -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <span class="text-amber-400 font-bold text-xs tracking-widest uppercase">Visit Our Aligarh Office</span>
+                        <h2 class="text-3xl font-extrabold text-white mt-1">Maestro Realtor</h2>
+                        <p class="text-slate-400 text-sm mt-2">Premier Real Estate Agency in Aligarh providing complete property assistance with honesty, transparency, and market leadership.</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="glass-card p-4 rounded-xl flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-lg shrink-0 mt-1">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold text-slate-400 uppercase">Office Address</h4>
+                                <p class="text-sm font-semibold text-white mt-0.5">
+                                    Maestro Realtor, F.M Tower, Teachers Colony, Radio Colony, Aligarh, Uttar Pradesh 202001
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="glass-card p-4 rounded-xl flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-lg shrink-0 mt-1">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold text-slate-400 uppercase">Contact Numbers</h4>
+                                <p class="text-sm font-bold text-amber-400 mt-0.5 space-x-3">
+                                    <a href="tel:08586925762" class="hover:underline">085869 25762</a>
+                                    <span class="text-slate-600">|</span>
+                                    <a href="tel:08881111999" class="hover:underline">88811 11999</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="glass-card p-4 rounded-xl flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-lg shrink-0 mt-1">
+                                <i class="far fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold text-slate-400 uppercase">Working Hours</h4>
+                                <p class="text-sm font-semibold text-emerald-400 mt-0.5">
+                                    Open Daily • Closes 6:00 PM
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-3">
+                        <a href="tel:08586925762" class="flex-1 text-center py-3.5 rounded-xl gold-gradient text-slate-950 font-bold text-sm shadow-md">
+                            <i class="fas fa-phone-alt mr-1"></i> Call Primary
+                        </a>
+                        <a href="https://wa.me/918586925762" target="_blank" class="flex-1 text-center py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-md">
+                            <i class="fab fa-whatsapp mr-1"></i> WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Google Maps Embed Container -->
+                <div class="lg:col-span-7 glass-card rounded-2xl p-2 h-[450px] relative overflow-hidden border border-amber-500/30">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3525.0210214811986!2d78.07722237547847!3d27.931888976054807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3974a4f8ad22872d%3A0xb35a9d6ff56f343!2sMaestro%20Realtor!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin" 
+                        class="w-full h-full rounded-xl border-0" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="strict-origin-when-cross-origin">
+                    </iframe>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 border-t border-slate-800 text-slate-400 py-12 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="font-serif text-lg font-bold text-white mb-2">MAESTRO <span class="gold-text">REALTOR</span></div>
+                    <p class="text-slate-400 leading-relaxed">
+                        Best Real Estate Agency in Aligarh providing best services in market for 3 BHK Duplexes, fully furnished flats, and commercial properties.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-3 uppercase tracking-wider text-[11px]">Popular Property Types</h4>
+                    <ul class="space-y-1.5">
+                        <li>3 BHK Duplex Houses</li>
+                        <li>Fully Furnished Apartments</li>
+                        <li>Commercial Shops & Offices</li>
+                        <li>Residential Gated Plots</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-3 uppercase tracking-wider text-[11px]">Key Prime Localities</h4>
+                    <ul class="space-y-1.5">
+                        <li>Radio Colony & Teachers Colony</li>
+                        <li>F.M. Tower Main Road</li>
+                        <li>Centre Point & Ramghat Road</li>
+                        <li>Great Bypass Road Aligarh</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-3 uppercase tracking-wider text-[11px]">Contact Info</h4>
+                    <p class="text-slate-300">F.M Tower, Radio Colony, Aligarh, UP 202001</p>
+                    <p class="text-amber-400 font-bold mt-2">Phones: 085869 25762 | 88811 11999</p>
+                    <p class="text-emerald-400 text-[11px] mt-1"><i class="fas fa-circle text-[8px] mr-1"></i> Working hours: Open until 6:00 PM</p>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-900 pt-6 flex flex-col sm:flex-row justify-between items-center text-slate-500 gap-4">
+                <p>© 2026 Maestro Realtor. All rights reserved. Real Estate Consultant Aligarh.</p>
+                <div class="flex space-x-4 text-slate-400">
+                    <a href="#properties" class="hover:text-amber-400">Listings</a>
+                    <a href="#instagram" class="hover:text-amber-400">Instagram (50.7K)</a>
+                    <a href="#contact" class="hover:text-amber-400">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="fixed bottom-4 right-4 z-40 flex flex-col gap-3">
+        <a href="https://wa.me/918586925762?text=Hello%20Maestro%20Realtor,%20I%20have%20a%20property%20query." target="_blank" class="w-12 h-12 rounded-full bg-emerald-500 text-white flex items-center justify-center text-2xl shadow-2xl hover:scale-110 transition group relative" title="WhatsApp Us">
+            <i class="fab fa-whatsapp"></i>
+            <span class="absolute right-14 bg-slate-900 text-white text-[10px] px-2.5 py-1 rounded-lg shadow hidden group-hover:block whitespace-nowrap border border-slate-700">WhatsApp 85869 25762</span>
+        </a>
+        <a href="tel:08586925762" class="w-12 h-12 rounded-full gold-gradient text-slate-950 flex items-center justify-center text-xl shadow-2xl hover:scale-110 transition group relative" title="Call Now">
+            <i class="fas fa-phone-alt"></i>
+            <span class="absolute right-14 bg-slate-900 text-white text-[10px] px-2.5 py-1 rounded-lg shadow hidden group-hover:block whitespace-nowrap border border-slate-700">Call 85869 25762</span>
+        </a>
+    </div>
+
+    <div id="propertyModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-amber-500/40 rounded-2xl max-w-2xl w-full p-6 relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeModal('propertyModal')" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="modalContent">
+                <!-- Javascript will populate modal content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toastContainer" class="fixed top-5 right-5 z-50 space-y-2"></div>
+
+    <script>
+        const propertiesData = [
+            {
+                id: 101,
+                title: "New 3 BHK Duplex Fully Furnished",
+                category: "Duplex",
+                locality: "Radio Colony",
+                budgetCategory: "50to1cr",
+                price: "₹ 78 Lakhs",
+                size: "1,800 Sq. Ft",
+                image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80",
+                features: ["3 Bedrooms", "3 Attached Baths", "Modular Italian Kitchen", "Fully Furnished", "Gated Security"],
+                description: "Newly constructed flagship 3 BHK Duplex house fully furnished near Radio Colony. Features premium woodwork, fall ceiling lighting, modular kitchen, and dedicated car garage."
+            },
+            {
+                id: 102,
+                title: "Luxury 3 BHK Apartment Flat",
+                category: "Flat",
+                locality: "FM Tower",
+                budgetCategory: "under50",
+                price: "₹ 42 Lakhs",
+                size: "1,450 Sq. Ft",
+                image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80",
+                features: ["Lift Available", "Covered Parking", "24/7 Water & Security", "Prime FM Tower Road"],
+                description: "Ready-to-move 3 BHK modern flat close to F.M. Tower and Teachers Colony. Excellent ventilation, balcony view, and verified clean title papers."
+            },
+            {
+                id: 103,
+                title: "Prime Main Road Commercial Shop",
+                category: "Commercial",
+                locality: "Centre Point",
+                budgetCategory: "50to1cr",
+                price: "₹ 95 Lakhs",
+                size: "450 Sq. Ft",
+                image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
+                features: ["High Footfall", "Heavy Frontage", "Ideal for Showroom/Clinic", "Immediate Possession"],
+                description: "Ground floor commercial unit in high commercial demand belt near Centre Point Aligarh. Excellent ROI and high rental yield prospective."
+            },
+            {
+                id: 104,
+                title: "Modern 2 BHK Semi-Furnished Flat",
+                category: "Flat",
+                locality: "Great Bypass",
+                budgetCategory: "under50",
+                price: "₹ 34 Lakhs",
+                size: "1,100 Sq. Ft",
+                image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
+                features: ["Wardrobes Installed", "Modular Kitchen", "Society Park", "Bank Loan Ready"],
+                description: "Affordable 2 BHK modern flat with excellent road connectivity near Great Bypass Road Aligarh. Peaceful environment with round-the-clock security."
+            },
+            {
+                id: 105,
+                title: "Independent Executive 4 BHK Duplex Villa",
+                category: "Duplex",
+                locality: "Teachers Colony",
+                budgetCategory: "above1cr",
+                price: "₹ 1.25 Crore",
+                size: "2,400 Sq. Ft",
+                image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80",
+                features: ["4 Master Suites", "Private Terrace Garden", "Double Height Lounge", "2 SUV Parking"],
+                description: "Ultra luxury grand duplex villa in Teachers Colony Aligarh. Built with premium marble flooring, solar power setup, and luxurious interiors."
+            },
+            {
+                id: 106,
+                title: "Residential Plot in Gated Community",
+                category: "Plot",
+                locality: "Radio Colony",
+                budgetCategory: "under50",
+                price: "₹ 28 Lakhs",
+                size: "150 Sq. Yards",
+                image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80",
+                features: ["Clear Boundary", "30 Ft Wide Road", "Sewerage & Electricity", "Immediate Registry"],
+                description: "Square plot ideal for custom villa construction situated in approved gated enclave near Radio Colony Aligarh."
+            }
+        ];
+
+        let activeCategory = 'all';
+
+        function renderProperties(items) {
+            const grid = document.getElementById('propertyGrid');
+            const emptyState = document.getElementById('noPropertyFound');
+            grid.innerHTML = '';
+
+            if (items.length === 0) {
+                emptyState.classList.remove('hidden');
+                return;
+            } else {
+                emptyState.classList.add('hidden');
+            }
+
+            items.forEach(prop => {
+                const card = document.createElement('div');
+                card.className = 'glass-card rounded-2xl overflow-hidden flex flex-col justify-between group';
+                card.innerHTML = `
+                    <div>
+                        <div class="relative h-52 overflow-hidden">
+                            <img src="${prop.image}" alt="${prop.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/600x400/111827/ffffff?text=Aligarh+Property'">
+                            <div class="absolute top-3 left-3 bg-slate-900/90 backdrop-blur-md border border-amber-500/30 text-amber-400 text-[11px] font-extrabold px-2.5 py-1 rounded-lg">
+                                ${prop.category}
+                            </div>
+                            <div class="absolute top-3 right-3 bg-emerald-500 text-slate-950 text-[11px] font-black px-2.5 py-1 rounded-lg">
+                                Verified Title
+                            </div>
+                        </div>
+
+                        <div class="p-5">
+                            <div class="flex items-center gap-1.5 text-xs text-amber-400 font-semibold mb-1">
+                                <i class="fas fa-map-marker-alt text-[10px]"></i> ${prop.locality}, Aligarh
+                            </div>
+                            <h3 class="text-base font-bold text-white group-hover:text-amber-400 transition-colors">${prop.title}</h3>
+                            
+                            <div class="mt-3 flex items-center justify-between text-xs py-2.5 px-3 bg-slate-800/80 rounded-xl border border-slate-700/60">
+                                <div>
+                                    <span class="text-slate-400 block text-[10px]">Area Size</span>
+                                    <span class="font-bold text-slate-200">${prop.size}</span>
+                                </div>
+                                <div class="text-right">
+                                    <span class="text-slate-400 block text-[10px]">Asking Price</span>
+                                    <span class="font-extrabold gold-text text-sm">${prop.price}</span>
+                                </div>
+                            </div>
+
+                            <ul class="mt-4 space-y-1.5 text-xs text-slate-300">
+                                ${prop.features.slice(0, 3).map(f => `<li class="flex items-center gap-2"><i class="fas fa-check text-amber-400 text-[10px]"></i> ${f}</li>`).join('')}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="p-5 pt-0 flex gap-2">
+                        <button onclick="openPropertyModal(${prop.id})" class="flex-1 py-2.5 rounded-xl border border-amber-500/30 text-amber-300 font-bold text-xs hover:bg-amber-500/10 transition">
+                            View Specs
+                        </button>
+                        <a href="https://wa.me/918586925762?text=Interested%20in%20Property%20ID%20${prop.id}%3A%20${encodeURIComponent(prop.title)}" target="_blank" class="px-3.5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold flex items-center justify-center">
+                            <i class="fab fa-whatsapp text-sm"></i>
+                        </a>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function setCategoryFilter(cat, btnElement) {
+            activeCategory = cat;
+            document.querySelectorAll('#propertyCategoryTabs .cat-btn').forEach(b => {
+                b.className = 'cat-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-xl text-xs font-bold transition';
+            });
+            btnElement.className = 'cat-btn bg-amber-500 text-slate-950 px-4 py-2 rounded-xl text-xs font-bold transition';
+            filterProperties();
+        }
+
+        function applyHeroFilter() {
+            filterProperties();
+        }
+
+        function filterProperties() {
+            const type = document.getElementById('heroType').value;
+            const locality = document.getElementById('heroLocality').value;
+            const budget = document.getElementById('heroBudget').value;
+
+            const filtered = propertiesData.filter(item => {
+                const matchCategory = (activeCategory === 'all' || item.category === activeCategory);
+                const matchType = (type === 'all' || item.category === type);
+                const matchLocality = (locality === 'all' || item.locality.toLowerCase().includes(locality.toLowerCase()));
+                const matchBudget = (budget === 'all' || item.budgetCategory === budget);
+
+                return matchCategory && matchType && matchLocality && matchBudget;
+            });
+
+            renderProperties(filtered);
+        }
+
+        function resetAllFilters() {
+            document.getElementById('heroFilterForm').reset();
+            activeCategory = 'all';
+            renderProperties(propertiesData);
+        }
+
+        function openPropertyModal(id) {
+            const prop = propertiesData.find(p => p.id === id);
+            if (!prop) return;
+
+            const modalContent = document.getElementById('modalContent');
+            modalContent.innerHTML = `
+                <div class="relative h-60 rounded-xl overflow-hidden mb-4">
+                    <img src="${prop.image}" alt="${prop.title}" class="w-full h-full object-cover">
+                    <div class="absolute top-3 left-3 bg-amber-500 text-slate-950 text-xs font-bold px-3 py-1 rounded-lg">
+                        ${prop.category}
+                    </div>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-1">${prop.title}</h3>
+                <p class="text-xs text-amber-400 font-semibold mb-3"><i class="fas fa-map-marker-alt"></i> Locality: ${prop.locality}, Aligarh UP</p>
+                
+                <p class="text-xs text-slate-300 mb-4 leading-relaxed">${prop.description}</p>
+
+                <div class="grid grid-cols-2 gap-3 mb-4 text-xs">
+                    <div class="bg-slate-800 p-3 rounded-xl border border-slate-700">
+                        <span class="text-slate-400 block text-[10px]">Area Dimension</span>
+                        <span class="font-bold text-white text-sm">${prop.size}</span>
+                    </div>
+                    <div class="bg-slate-800 p-3 rounded-xl border border-slate-700">
+                        <span class="text-slate-400 block text-[10px]">Expected Price</span>
+                        <span class="font-bold gold-text text-sm">${prop.price}</span>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <h4 class="text-xs font-bold text-slate-300 uppercase mb-2">Key Highlights</h4>
+                    <div class="grid grid-cols-2 gap-2">
+                        ${prop.features.map(f => `<div class="bg-slate-800/50 p-2 rounded-lg text-xs text-slate-300 flex items-center gap-2"><i class="fas fa-check-circle text-amber-400"></i> ${f}</div>`).join('')}
+                    </div>
+                </div>
+
+                <div class="flex gap-3 pt-2 border-t border-slate-800">
+                    <a href="tel:08586925762" class="flex-1 text-center py-3 rounded-xl gold-gradient text-slate-950 font-bold text-xs">
+                        <i class="fas fa-phone-alt mr-1"></i> Call 85869 25762
+                    </a>
+                    <a href="https://wa.me/918586925762?text=Inquiry%20for%20${encodeURIComponent(prop.title)}" target="_blank" class="flex-1 text-center py-3 rounded-xl bg-emerald-600 text-white font-bold text-xs">
+                        <i class="fab fa-whatsapp mr-1"></i> WhatsApp Inquiry
+                    </a>
+                </div>
+            `;
+            openModal('propertyModal');
+        }
+
+        function openModal(id) {
+            document.getElementById(id).classList.remove('hidden');
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.add('hidden');
+        }
+
+        function showToast(message) {
+            const container = document.getElementById('toastContainer');
+            const toast = document.createElement('div');
+            toast.className = 'notification-toast bg-amber-500 text-slate-950 px-5 py-3 rounded-xl font-bold text-xs shadow-2xl flex items-center gap-2 border border-yellow-300';
+            toast.innerHTML = `<i class="fas fa-check-circle text-base"></i> <span>${message}</span>`;
+            container.appendChild(toast);
+
+            setTimeout(() => {
+                toast.remove();
+            }, 4000);
+        }
+
+        function handleInquirySubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('leadName').value;
+            showToast(`Thank you ${name}! Maestro Realtor team will call you shortly.`);
+            e.target.reset();
+        }
+
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        });
+
+        window.onload = function() {
+            renderProperties(propertiesData);
+        };
+    </script>
+</body>
+</html>
